@@ -15,11 +15,14 @@ function Searchbar() {
   
   const clientId = '-CwUgXJQw1Rziz2a7kRyLTrAlCkMUVSofNsa2t_gUL4';
   const url = `https://api.unsplash.com/photos/?client_id=${clientId}`;
+  const url2 = `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${input}&client_id=${clientId}`;
 
   useEffect(() => {
     axios.get(url)
     .then((response) => {
       setResult(response.data);
+    }).catch(e => {
+      console.log(e.message)
     });
 
   }, [])
@@ -33,9 +36,14 @@ function Searchbar() {
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log(input)
-    axios.get(url)
-    .then((response) => {
-      setResult(response.data);
+    axios
+    .get(url2)
+    .then(response => {
+      setResult(response.data.results);
+      console.log(response.data)
+    })
+    .catch(err => {
+      console.log('Error happened during fetching!', err);
     });
   };
 
