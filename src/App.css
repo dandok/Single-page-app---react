@@ -57,13 +57,6 @@ body {
    color: 85838E;
 }
 
-.SidebarList .row:hover {
-  cursor: pointer;
-  border: 1px solid grey ;
-  color: black;
-  border-radius: 0.5rem;
-}
-
 .SidebarList #active {
   border: 1px solid grey ;  
   border-radius: 0.5rem;
@@ -72,6 +65,13 @@ body {
 .row {
   display: flex;
   padding: 1rem 2rem;
+}
+
+.row:hover{
+  cursor: pointer;
+  border: 1px solid grey ;
+  color: black;
+  border-radius: 0.5rem; 
 }
 
 #icon {

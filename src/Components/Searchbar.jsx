@@ -6,8 +6,6 @@ import { useState } from "react";
 import { BsSearch } from 'react-icons/bs';
 import { IoMdNotifications } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io'
-import { MdPhotoCamera } from 'react-icons/md'
-import { AiFillHeart } from 'react-icons/ai'
 import Drop from './Dropdown'
 
 
@@ -16,41 +14,32 @@ function Searchbar() {
   const [result, setResult] = useState([]);
   
   const clientId = '-CwUgXJQw1Rziz2a7kRyLTrAlCkMUVSofNsa2t_gUL4';
-  const url = 'https://api.unsplash.com/search/photos?page=1&query=' + input + 'client_id=' + clientId;
-
-  const handleChange = (event) => {
-    event.preventDefault()
-    setInput(event.target.value);
-  };
-
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    
-    axios.get(url).then((response) => {
-      setResult(response.data.results);
-      console.log(response.data.results)
-    });
-  };
+  const url = `https://api.unsplash.com/photos/?client_id=${clientId}`;
 
   useEffect(() => {
-    const url = 'https://api.unsplash.com/photos/?client_id=' + clientId;
-  
-    axios.get(url).then((response) => {
+    axios.get(url)
+    .then((response) => {
       setResult(response.data);
-      console.log(response.data)
     });
 
   }, [])
 
-  // const menu = (
-  //   <Menu>
-  //     <Menu.Item key="0">
-  //         Michael liked you!
-  //     </Menu.Item>
-      
-  //   </Menu>
-  // );
+  const handleChange = (event) => {
+    event.preventDefault()
+
+    setInput(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(input)
+    axios.get(url)
+    .then((response) => {
+      setResult(response.data);
+    });
+  };
+
+  
 
   return (
     <>
