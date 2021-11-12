@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFC;
+}
+.app-sidebar{
+  border-right: 3px solid #F2F2F4;
+}
+
+.main {
+  background-color: #FAFAFC;;
+  width: 100%;
+  height: 100vw;
+  margin: 0;
+}
+
+.Sidebar {
+  width: 200px;
+  margin-left: 1rem;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+  color: 85838E;
+}
+
+.SidebarList {
+   width: 100%;
+   height: 50px; 
+   list-style-type: none;
+   margin-left: 0.5rem;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: 85838E;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  border: 1px solid grey ;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+.SidebarList #active {
+  border: 1px solid grey ;  
+  border-radius: 0.5rem;
+}
+
+.row {
+  display: flex;
+  padding: 1rem 2rem;
+}
+
+#icon {
+  padding-right: 1rem;
+}
+
+.row {
+  z-index: 99;
+}
+
+.Searchbar {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  padding:0.8rem;
+  background-color: white;
+  border-radius: 8px;
+  width: 80%
+}
+
+.search {
+  background-color: #3A319E;
+  color: #FAFAFC;
+  border-radius: 8px;
+  padding: 0.7rem 1.6rem; 
+  border: none;
+}
+
+.search-icon{
+  margin-right: 1rem;
+}
+
+.input {
+  padding: 0.4rem;
+  border: transparent;
+  width: 100%;
+  outline: none;
+}
+
+.dropdown .dropdown-btn{
+  padding: 10px;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.01);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(75, 73, 73);
+}
+
+.dropdown {
+  margin-left: 2rem;
+  width: 80%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.drop {
+  margin: 1px solid grey
+}
+
+.notification{
+  border: 0;
+  background-color: #FAFAFC;
+}
+
+.app-notification {
+  width: 5%;
+}
+
+.avatar {
+  width: 15%;
+}
+
+.abigail {
+  background-color: #FAFAFC;
+  border: 0;
+  color: #3A319E;
+}
+
+#share {
+  padding-left: 3rem;
+  color: grey;
+}
+
+.result {
+  padding-left: 1rem;
+  display:flex;
+  flex-wrap: wrap;
+  height: 0px;
+}
+
+#bluecube{
+  margin: 1rem;
+  padding-top: 1rem;
+  color: #3A319E;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  padding: 1rem;
+  width: 250px;
+}
+
+.img {
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  padding: 12px;
+  color: white;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.location {
+  font-size: small;
+}
